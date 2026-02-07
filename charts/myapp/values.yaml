@@ -18,3 +18,10 @@ appConfig:
 service:
   type: ClusterIP
   port: 80
+
+  # Configuration for the Nginx dependency
+nginx:
+  image:
+    tag: 1.23.0
+  service:
+    type: NodePort
