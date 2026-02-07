@@ -1,0 +1,9 @@
+NAME                           READY   STATUS      RESTARTS        AGE
+myapp-cleanup-29507666-ghzz7   0/1     Completed   0               2m28s
+myapp-cleanup-29507667-b5df6   0/1     Completed   0               88s
+myapp-cleanup-29507668-fv58f   0/1     Completed   0               28s
+myapp-deploy-8c5c9d578-4n7bv   1/1     Running     1 (4m33s ago)   78m
+myapp-deploy-8c5c9d578-wdvmm   1/1     Running     1 (4m36s ago)   78m
+myapp-ds-8zvtk                 1/1     Running     1 (4m35s ago)   78m
+myapp-init-job-ccnkc           0/1     Completed   0               46h
+myapp-nginx-686788c948-wvk6p   1/1     Running     0               3m42s

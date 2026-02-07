@@ -22,6 +22,10 @@ service:
   # Configuration for the Nginx dependency
 nginx:
   image:
-    tag: 1.23.0
+    tag: latest  # זה ימשוך תמיד את הגירסה הכי עדכנית ויפתור את בעיית ה-Pull
   service:
     type: NodePort
+    ports:
+      http: 80   # מוודא שהסרוויס מאזין בפורט 80
+  persistence:
+    enabled: false
