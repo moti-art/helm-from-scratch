@@ -1,0 +1,20 @@
+# --- General Settings ---
+replicaCount: 2
+
+# --- Image Settings ---
+image:
+  repository: busybox
+  tag: "1.37"
+  pullPolicy: IfNotPresent
+  # ב-Busybox צריך פקודה כדי שהקונטיינר לא יסגר מיד
+  command: ["sh", "-c", "echo Hello from BusyBox && sleep 3600"]
+
+# --- Application Configuration ---
+appConfig:
+  message: "Hello from Moti Levi's BusyBox"
+  apiToken: "MySecretToken123"
+
+# --- Service Settings ---
+service:
+  type: ClusterIP
+  port: 80

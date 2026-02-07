@@ -1,0 +1,6 @@
+NAME: myapp
+LAST DEPLOYED: Sat Feb  7 10:32:39 2026
+NAMESPACE: default
+STATUS: deployed
+REVISION: 3
+TEST SUITE: None

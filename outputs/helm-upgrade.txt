@@ -1,0 +1,8 @@
+NAME                            READY   STATUS      RESTARTS   AGE
+myapp-cleanup-29507571-5c6bx    0/1     Completed   0          2m45s
+myapp-cleanup-29507572-qmdtc    0/1     Completed   0          105s
+myapp-cleanup-29507573-hhtxp    0/1     Completed   0          45s
+myapp-deploy-7f4d9dd44f-v9tsm   1/1     Running     0          10m
+myapp-deploy-7f4d9dd44f-z5m77   1/1     Running     0          10m
+myapp-ds-mlqrn                  1/1     Running     0          10m
+myapp-init-job-ccnkc            0/1     Completed   0          45h
