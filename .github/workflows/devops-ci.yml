@@ -1,0 +1,19 @@
+name: Helm Project CI
+
+on:
+  push:
+    branches: [ "main" ] # ירוץ בכל פעם שתעשה Push לענף הראשי
+
+jobs:
+  test-my-chart:
+    runs-on: ubuntu-latest # המכונה ש-GitHub מקצה לך בענן
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4 # מושך את הקוד שלך למכונה בענן
+
+      - name: Check Helm Syntax
+        run: helm lint ./charts/myapp # בודק שה-Chart שלך תקין ללא שגיאות
+      
+      - name: Print Success Message
+        run: echo "Congrats Moti! The Helm Chart is valid."
