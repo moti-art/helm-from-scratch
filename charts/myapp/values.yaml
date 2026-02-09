@@ -29,3 +29,12 @@ nginx:
       http: 80   # מוודא שהסרוויס מאזין בפורט 80
   persistence:
     enabled: false
+    
+# --- cronjob Settings ---
+cronjob:
+  schedule: "*/1 * * * *"
+  image: "busybox"
+
+# --- job Settings --
+job:
+  image: "busybox"

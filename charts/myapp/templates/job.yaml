@@ -7,6 +7,6 @@ spec:
     spec:
       containers:
       - name: job-container
-        image: busybox:1.36
+        image: {{ .Values.job.image | quote }}
         command: ["sh", "-c", "echo 'Job executed successfully at $(date)'"]
       restartPolicy: Never
