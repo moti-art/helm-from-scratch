@@ -17,9 +17,10 @@ service:
   port: 80
 
   # Configuration for the Nginx dependency
-nginx:
+  nginx:
   image:
-    tag: latest  # זה ימשוך תמיד את הגירסה הכי עדכנית ויפתור את בעיית ה-Pull
+    repository: motinet/helm-app
+    tag: latest
   service:
     type: NodePort
     ports:
