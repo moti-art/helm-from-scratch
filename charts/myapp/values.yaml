@@ -1,7 +1,7 @@
 # --- General Settings ---
 replicaCount: 2
 
-# --- Image Settings (עבור ה-Deployment הראשי שלך) ---
+# --- Image Settings (עבור ה-Deployment הראשי) ---
 image:
   repository: motinet/helm-app
   tag: latest
@@ -23,10 +23,22 @@ nginx:
     repository: motinet/helm-app
     tag: latest
     pullPolicy: Always
+  
+  # ניטרול מנגנוני הבדיקה וההרצה המובנים של Bitnami שגורמים לשגיאה 127
+  containerSecurityContext:
+    enabled: false
+  podSecurityContext:
+    enabled: false
+  
+  # ביטול ניסיונות להעתיק לוגים או קבצים סטטיים מנתיבים שלא קיימים באימג' שלך
+  cloneStaticSiteFromGit:
+    enabled: false
+  
   service:
     type: NodePort
     ports:
       http: 80
+  
   persistence:
     enabled: false
 
