@@ -16,6 +16,19 @@ service:
   type: ClusterIP
   port: 80
 
+# שים לב לשינוי כאן: nginx נמצא ברמה הכי חיצונית (בלי רווחים לפניו)
+# וכל מה שמתחתיו מוסט פנימה ב-2 רווחים
+nginx:
+  image:
+    repository: motinet/helm-app
+    tag: latest
+  service:
+    type: NodePort
+    ports:
+      http: 80
+  persistence:
+    enabled: false
+
   # Configuration for the Nginx dependency
   nginx:
   image:
