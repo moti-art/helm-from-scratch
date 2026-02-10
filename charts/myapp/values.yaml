@@ -14,8 +14,9 @@ appConfig:
 
 # --- Main Service Settings ---
 service:
-  type: NodePort  # שנה מ-ClusterIP ל-NodePort
-  port: 80
+  type: NodePort
+  port: 80         # הפורט החיצוני של הסרוויס
+  targetPort: 80   # הפורט שה-Nginx בתוך הפוד באמת מאזין לו (נסה 80, ואם לא עובד שנה ל-8080)
 
 # --- cronjob Settings ---
 cronjob:
