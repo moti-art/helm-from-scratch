@@ -3,11 +3,8 @@ replicaCount: 2
 
 # --- Image Settings ---
 image:
-  repository: busybox
-  tag: "1.37"
-  pullPolicy: IfNotPresent
-  # ב-Busybox צריך פקודה כדי שהקונטיינר לא יסגר מיד
-  command: ["sh", "-c", "echo Hello from BusyBox && sleep 3600"]
+  repository: motinet/helm-app
+  
 
 # --- Application Configuration ---
 appConfig:
