@@ -14,9 +14,9 @@ appConfig:
 
 # --- Main Service Settings ---
 service:
-  type: ClusterIP
+  type: NodePort  # שנה מ-ClusterIP ל-NodePort
   port: 80
-  
+
 # --- cronjob Settings ---
 cronjob:
   schedule: "*/1 * * * *"
