@@ -1,6 +1,12 @@
 # --- General Settings ---
 replicaCount: 2
 
+# --- Image Settings (עבור ה-Deployment הראשי שלך) ---
+image:
+  repository: motinet/helm-app
+  tag: latest
+  pullPolicy: Always
+
 # --- Application Configuration ---
 appConfig:
   message: "Hello from Moti Levi's BusyBox"
@@ -12,7 +18,6 @@ service:
   port: 80
 
 # --- Nginx Dependency Settings ---
-# שים לב: המילה nginx חייבת להיות צמודה להתחלה (בלי רווחים)
 nginx:
   image:
     repository: motinet/helm-app
