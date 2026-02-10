@@ -6,6 +6,6 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: 5678
+      targetPort: 80   # <--- זה השינוי! מ-5678 ל-80
   selector:
     app: {{ .Release.Name }}
